@@ -12,12 +12,12 @@ Number = 0
 Hlist = []
 def send_uesr(uesr):
 	tt=time.asctime()
-	req = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage?chat_id={id}&video=https://t.me/mmmmmmm0/4&caption=𝑰𝒔 𝒂 𝑵𝒆𝒘 𝒖𝒔𝒆𝒓 𝑩𝒚 : 𝒂𝑩𝒐𝒐𝑫 🐊,\nএ〔 𝑼𝒔𝒆𝒓𝒏𝒂𝒎𝒆 〕: @{uesr}\nClicks {tt} \nএ〔 𝒂𝑩𝒐𝒐𝑫 〕: @prxey')
+	req = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage?chat_id={id}&text=𝑰𝒔 𝒂 𝑵𝒆𝒘 𝒖𝒔𝒆𝒓 𝑩𝒚 : 𝒂𝑩𝒐𝒐𝑫 🐊,\nএ〔 𝑼𝒔𝒆𝒓𝒏𝒂𝒎𝒆 〕: @{uesr}\nClicks {tt} \nএ〔 𝒂𝑩𝒐𝒐𝑫 〕: @prxey')
 def check_uesr_xbox_ruks():
 	global Number
 	while True:
 		Number +=1
-		ruks = str("".join(random.choice( 'poiuytrewqasdfghjklmnbvcxz1234567890_')for i in range(count)))	
+		ruks = str("".join(random.choice( 'poiuytrewqasdfghjklmnbvcxz1234567890')for i in range(count)))	
 		req_ruks=requests.get(f"https://xboxgamertag.com/search/{ruks}",headers={'Host': 'xboxgamertag.com','cache-control': 'max-age=0','sec-ch-ua': '"Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','save-data': 'on','upgrade-insecure-requests': '1','user-agent': generate_user_agent(),'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'none','sec-fetch-mode': 'navigate','sec-fetch-user': '?1','sec-fetch-dest': 'document'}).status_code	
 		if req_ruks == 200:
 			print(jruks+'['+BRed+f'{Number}'+jruks+'] Unavailable'+BRed+f'-[{ruks}]')
