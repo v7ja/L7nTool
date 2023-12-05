@@ -1,82 +1,75 @@
-import requests,random,threading
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# ---------------------
+# Telegram : @DIBIBl , @TDTDI ,@ruks3
+# Coded by ruks
+# YouTube : https://youtube.com/channel/UCUNbzQRjfAXGCKI1LY72DTA
+# Instagram : https://instagram.com/_v_go?utm_medium=copy_link
+# ---------------------
+import requests,time,random,threading
+from user_agent import generate_user_agent
+Number = 0
+Hlist = []
+def send_uesr(uesr):
+	tt=time.asctime()
+	req = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage?chat_id={id}&video=https://t.me/mmmmmmm0/4&caption=𝑰𝒔 𝒂 𝑵𝒆𝒘 𝒖𝒔𝒆𝒓 𝑩𝒚 : 𝒂𝑩𝒐𝒐𝑫 🐊,\nএ〔 𝑼𝒔𝒆𝒓𝒏𝒂𝒎𝒆 〕: @{uesr}\nClicks {tt} \nএ〔 𝒂𝑩𝒐𝒐𝑫 〕: @prxey')
+def check_uesr_xbox_ruks():
+	global Number
+	while True:
+		Number +=1
+		ruks = str("".join(random.choice( 'poiuytrewqasdfghjklmnbvcxz1234567890_')for i in range(count)))	
+		req_ruks=requests.get(f"https://xboxgamertag.com/search/{ruks}",headers={'Host': 'xboxgamertag.com','cache-control': 'max-age=0','sec-ch-ua': '"Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','save-data': 'on','upgrade-insecure-requests': '1','user-agent': generate_user_agent(),'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'none','sec-fetch-mode': 'navigate','sec-fetch-user': '?1','sec-fetch-dest': 'document'}).status_code	
+		if req_ruks == 200:
+			print(jruks+'['+BRed+f'{Number}'+jruks+'] Unavailable'+BRed+f'-[{ruks}]')
+		elif req_ruks == 404:
+			print(jruks+'['+BGreen+f'{Number}'+jruks+'] Available'+BGreen+f' [{ruks}]')
+			send_uesr(ruks)
+		else: pass	
+		
+ruks_ = '\033[1;36m'	
+ruks__ = '\033[1;36m'
+jruks = '\033[1;33m'
+_ruks  = '\033[1;31m'
+BGreen='\033[1;32m'
+BRed ='\033[1;31m'
+T=("="*60)
+print(f"""{BRed}{T}
+{BGreen}
+    ___  _   _  ____  ___  _  _    _  _  ____  _____  _  _   
+   / __)( )_( )( ___)/ __)( )/ )  ( \/ )(  _ \(  _  )( \/ )  
+  ( (__  ) _ (  )__)( (__  )  (    )  (  ) _ < )(_)(  )  (   
+   \___)(_) (_)(____)\___)(_)\_)  (_/\_)(____/(_____)(_/\_)  
+{jruks}
 
-F = '\033[2;32m' #اخضر
-Z = '\033[1;31m' #احمر
-X = '\033[1;33m' #اصفر
-U = '\x1b[1;37m'#ابیض
+	        __          __       __             
+	 ____  / /  __ __  / /___ __/ /__ ___   ____
+	/___/ / _ \/ // / / __/ // /  '_/(_-<  /___/
+	     /_.__/\_, /  \__/\_,_/_/\_\/___/       
+	          /___/                             
+	
+{BRed}{T}""")
+tok = input(jruks+'['+_ruks+'+'+jruks+']'+ruks__+' TOKEN BOT ! -> ; '+BGreen)
+id = input(jruks+'['+_ruks+'+'+jruks+']'+ruks__+' ID ! -> ; '+BGreen)
+try:
+	count = int(input(jruks+'['+_ruks+'+'+jruks+']'+ruks__+' Character count ! -> ; '+BRed))
+except:
+	print("="*30)
+	print("Please put numbers only")
+	exit(0)
+if count >10: print("="*30),print("Please write a number less than 10"),exit()
 
-print(f"""           
-{F}[+]{X}my user ==> {U}@prxey
-""")
+if __name__ == '__main__':
+	print("="*60)	
+	for i in range(5):
+		H1 =threading.Thread(target=check_uesr_xbox_ruks)
+		H1.start()
+		Hlist.append(H1)
+	for H2 in Hlist:
+		H2.join								
+		
 
-Token_tele = input(f" {F}To{U}ke{X}n :{Z} ")
-print("  "*10)
-Id_tele = input(f" {F}I{U}D{Z} : {X}")
-print('  '*25)
 
-L7Nrandom_num_Letter ="1234567890qwertyuiopasdfghjklzxcvbnm"
-def L7Nd(user):
-    L7NClicks = 0
-    url = requests.post('https://www.instagram.com/accounts/web_create_ajax/attempt/',headers ={'Host':'www.instagram.com',
-'content-length':'85',
-'sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="101"',
-'x-ig-app-id':'936619743392459',
-'x-ig-www-claim':'0',
-'sec-ch-ua-mobile':'?0',
-'x-instagram-ajax':'81f3a3c9dfe2',
-'content-type':'application/x-www-form-urlencoded',
-'accept':'*/*',
-'x-requested-with':'XMLHttpRequest',
-'x-asbd-id':'198387',
-'user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Safari/537.36',
-'x-csrftoken':'jzhjt4G11O37lW1aDFyFmy1K0yIEN9Qv',
-'sec-ch-ua-platform':'"Linux"',
-'origin':'https://www.instagram.com',
-'sec-fetch-site':'same-origin',
-'sec-fetch-mode':'cors',
-'sec-fetch-dest':'empty',
-'referer':'https://www.instagram.com/accounts/emailsignup/',
-'accept-encoding':'gzip, deflate, br',
-'accept-language':'en-IQ,en;q=0.9',
-'cookie':'csrftoken=jzhjt4G11O37lW1aDFyFmy1K0yIEN9Qv',
-'cookie':'mid=YtsQ1gABAAEszHB5wT9VqccwQIUL',
-'cookie':'ig_did=227CCCC2-3675-4A04-8DA5-BA3195B46425',
-'cookie':'ig_nrcb=1'},data=f'email=aakmnnsjskksmsnsn%40gmail.com&username={user}&first_name=&opt_into_one_tap=false')
-    if '{"message":"feedback_required","spam":true,"feedback_title":"Try Again Later","feedback_message":"We limit how often you can do certain things on Instagram to protect our community. Tell us if you think we made a mistake.","feedback_url":"repute/report_problem/scraping/","feedback_appeal_label":"Tell us","feedback_ignore_label":"OK","feedback_action":"report_problem","status":"fail"}' in url.text:
-        print(f"{Z}𝖡𝖺𝖽 𝖴𝗌𝖾𝗋 > {user}")
-     
-    elif  '"errors": {"username":' in url.text or  '"code": "username_is_taken"' in url.text:
-        print(f"{Z}𝖡𝖺𝖽 𝖴𝗌𝖾𝗋 > {user}")
-        L7NClicks+=1
-   
-    else: 
-        print(f"{F}𝖧𝗂𝗍 𝖴𝗌𝖾𝗋 > {user}")
-        L7N1=f"""
-𝗧𝗮𝗞𝗲 𝗡𝗲𝗪 , 
- - - - - - - - - - - -  
-𓏺 𝗎𝗌𝖾𝗋𝗇𝖺𝗆𝖾 : ❲ @{user} ❳‌‌ -  
-𓏺 𝖢𝗅𝗂𝖼𝗄𝗌  : ❲ {L7NClicks} ❳‌‌ - 
-𓏺 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋  : ❲ @prxey ❳‌‌ - """
-        requests.post(f"https://api.telegram.org/bot{Token_tele}/sendMessage?chat_id={Id_tele}&text="+str(L7N1))
 
-def L7Nend():
-    while True:
-	       a = str(''.join((random.choice(L7Nrandom_num_Letter) for i in range(1))))
-	       c = str(''.join((random.choice(L7Nrandom_num_Letter) for i in range(1))))
-	       b = str(''.join((random.choice(L7Nrandom_num_Letter) for i in range(1))))
-	       prxey = a+'_'+b+'_'+c
-	       aBooD = a+b+'_'+a+a
-	      
-	      
-	       L7Nus = prxey,aBooD
-	       user = random.choice(L7Nus)
-	       L7Nd(user)
-L7Nend()
-Threads=[] 
-for t in range(5):
- x = threading.Thread(target=L7Nend)
- x.start()
- Threads.append(x)
-for Th in Threads:
- Th.join()
-L7Nend()										
+				
+								
+		
