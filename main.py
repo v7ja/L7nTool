@@ -40,9 +40,7 @@ def Lev ():
 	   reqsnd = requests.get(tiko, headers=hea).text
 	   if '"statusCode":10221,' in reqsnd:
 	           print(f'{user} uSeR is Available!')
-	           requests.post(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text="""cHecker v3.7 Tik 
-hunt : {user}
-Situation : Done"""")
+	           requests.post(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text=cHecker v3.7 Tik \nhunt : {user} \nSituation : Done"""")
 	   else:
 	   	print(f'{user} uSeR is NoT Available')
 Threads=[] 
