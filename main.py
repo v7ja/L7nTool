@@ -3,9 +3,6 @@ try:
 	import random
 	import threading
 
-
-a = 'qwertyuiopasdfghjklzxcvbnm'
-b = '1234567890'
 id = input("EnTeR iD : ")
 token = input("EnTeR ToKeN : ")
 sessionid = input("EnTeR sEssioniD : ")
@@ -16,6 +13,8 @@ def Lev ():
         'user-agent': 'user-agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html',
         'Cookie': 'sessionid='+sessionid,
     }
+				a = 'qwertyuiopasdfghjklzxcvbnm'
+				b = '1234567890'
 	while True:
 	   aa = str("".join(random.choice(a)for x in range(1)))
 	   bb = str("".join(random.choice(b)for x in range(1)))
