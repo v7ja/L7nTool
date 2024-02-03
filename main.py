@@ -2,9 +2,22 @@ try:
 	import requests
 	import random
 	import threading
+	import pyfiglet
+except:
+	
+	os.system('pip install requests')
+	os.system('pip install random')
+	os.system('pip install threading')
+	os.system('pip install pyfiglet')
 
-id = input("EnTeR iD : ")
-token = input("EnTeR ToKeN : ")
+O = '\033[2;36m'
+Le = pyfiglet.figlet_format(' climed [:] ')
+print(O+Le)
+
+a = 'qwertyuiopasdfghjklzxcvbnm1234567890'
+b = 'qwertyuiopasdfghjklzxcvbnm1234567890'
+id = input("\033[2;33m<<<\033[2;34mEnter Id\033[2;33m>>>\033[2;32m :\033[2;31m ")
+token = input("\033[2;33m<<<\033[2;34mEnter Bot Token \033[2;33m>>> \033[2;32m:\033[2;31m ")
 sessionid = input("EnTeR sEssioniD : ")
 def Lev ():
 
@@ -13,8 +26,6 @@ def Lev ():
         'user-agent': 'user-agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html',
         'Cookie': 'sessionid='+sessionid,
     }
-				a = 'qwertyuiopasdfghjklzxcvbnm'
-				b = '1234567890'
 	while True:
 	   aa = str("".join(random.choice(a)for x in range(1)))
 	   bb = str("".join(random.choice(b)for x in range(1)))
