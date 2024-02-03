@@ -3,6 +3,7 @@ try:
 	import random
 	import threading
 	import pyfiglet
+	import time
 except:
 	
 	os.system('pip install requests')
@@ -10,6 +11,7 @@ except:
 	os.system('pip install threading')
 	os.system('pip install pyfiglet')
 
+timee=time.asctime()
 O = '\033[2;36m'
 Le = pyfiglet.figlet_format(' climed [:] ')
 print(O+Le)
@@ -40,7 +42,7 @@ def Lev ():
 	   reqsnd = requests.get(tiko, headers=hea).text
 	   if '"statusCode":10221,' in reqsnd:
 	           print(f'{user} uSeR is Available!')
-	           requests.post(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text=cHecker v3.7 Tik \nhunt : {user} \nSituation : Done"""")
+	           requests.post(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text=Nigga iAm Here : @{user} | After : print(timee)")
 	   else:
 	   	print(f'{user} uSeR is NoT Available')
 Threads=[] 
