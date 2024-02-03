@@ -11,20 +11,16 @@ except:
 	os.system('pip install threading')
 	os.system('pip install pyfiglet')
 
-On_White="\[\033[47m\]" # White
-IRed="\[\033[0;91m\]" # Red
-Green="\[\033[0;32m\]" # Green
-
 
 timee=time.asctime()
-O = '\033[47m'
+O = '\033[0;37m'
 Le = pyfiglet.figlet_format(' climed [:] ')
 print(O+Le)
 
 heros1 = 'qwertyuiopasdfghjklzxcvbnm1234567890'
-id = input("\033[47mEnTeR iD : ")
-token = input("\033[47mEnTeR ToKeN : ")
-sessionid = input("\033[47mEnTeR sEssioniD : ")
+id = input("\033[0;37mEnTeR iD : ")
+token = input("\033[0;37mEnTeR ToKeN : ")
+sessionid = input("\033[0;37mEnTeR sEssioniD : ")
 def Lev ():
 
 	hea = {
@@ -49,7 +45,7 @@ def Lev ():
 	           print(f'\033[0;32muSeR is Available! | {user}')
 	           requests.post(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text=Nigga iAm Here : @{user} | After : print(timee)")
 	   else:
-	   	print(f'\033[0;91muSeR is NoT Available | {user}')
+	   	print(f'\033[0;31mmuSeR is NoT Available | {user}')
 Threads=[] 
 for t in range(1):
     x = threading.Thread(target=Lev)
