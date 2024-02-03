@@ -1,7 +1,6 @@
 try:
 	import requests
 	import random
-	import threading
 	import pyfiglet
 except:
 	
@@ -43,10 +42,4 @@ def Lev ():
 	           requests.post(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text=cHecker v3.7 Tik \nhunt : {user} \nSituation : Done"""")
 	   else:
 	   	print(f'{user} uSeR is NoT Available')
-Threads=[] 
-for t in range(5):
-    x = threading.Thread(target=Lev)
-    x.start()
-    Threads.append(x)
-for Th in Threads:
-    Th.join()
+
