@@ -51,7 +51,7 @@ def Lev ():
 	   else:
 	   	print(f'\033[0;91muSeR is NoT Available | {user}')
 Threads=[] 
-for t in range(10):
+for t in range(1):
     x = threading.Thread(target=Lev)
     x.start()
     Threads.append(x)
