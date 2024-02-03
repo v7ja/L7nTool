@@ -25,7 +25,7 @@ def Lev ():
 	   type3 = (aa+aa+aa+bb)
 	   type4 = (aa+aa+bb+aa)
 	   type5 = (aa+bb+aa+aa)
-    type6 = (bb+aa+aa+aa)
+     type6 = (bb+aa+aa+aa)
     type7 = ('.'+aa+bb+bb)
     type8 = ('_'+aa+bb+bb)
     type9 = ('.'+bb+aa+bb)
