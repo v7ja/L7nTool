@@ -1,75 +1,76 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# ---------------------
-# Telegram : @DIBIBl , @TDTDI ,@ruks3
-# Coded by ruks
-# YouTube : https://youtube.com/channel/UCUNbzQRjfAXGCKI1LY72DTA
-# Instagram : https://instagram.com/_v_go?utm_medium=copy_link
-# ---------------------
-import requests,time,random,threading
-from user_agent import generate_user_agent
-Number = 0
-Hlist = []
-def send_uesr(uesr):
-	tt=time.asctime()
-	req = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage?chat_id={id}&text=𝑰𝒔 𝒂 𝑵𝒆𝒘 𝒖𝒔𝒆𝒓 𝑩𝒚 : 𝒂𝑩𝒐𝒐𝑫 🐊,\nএ〔 𝑼𝒔𝒆𝒓𝒏𝒂𝒎𝒆 〕: @{uesr}\nClicks {tt} \nএ〔 𝒂𝑩𝒐𝒐𝑫 〕: @prxey')
-def check_uesr_xbox_ruks():
-	global Number
-	while True:
-		Number +=1
-		ruks = str("".join(random.choice( 'poiuytrewqasdfghjklmnbvcxz1234567890')for i in range(count)))	
-		req_ruks=requests.get(f"https://xboxgamertag.com/search/{ruks}",headers={'Host': 'xboxgamertag.com','cache-control': 'max-age=0','sec-ch-ua': '"Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','save-data': 'on','upgrade-insecure-requests': '1','user-agent': generate_user_agent(),'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'none','sec-fetch-mode': 'navigate','sec-fetch-user': '?1','sec-fetch-dest': 'document'}).status_code	
-		if req_ruks == 200:
-			print(jruks+'['+BRed+f'{Number}'+jruks+'] Unavailable'+BRed+f'-[{ruks}]')
-		elif req_ruks == 404:
-			print(jruks+'['+BGreen+f'{Number}'+jruks+'] Available'+BGreen+f' [{ruks}]')
-			send_uesr(ruks)
-		else: pass	
-		
-ruks_ = '\033[1;36m'	
-ruks__ = '\033[1;36m'
-jruks = '\033[1;33m'
-_ruks  = '\033[1;31m'
-BGreen='\033[1;32m'
-BRed ='\033[1;31m'
-T=("="*60)
-print(f"""{BRed}{T}
-{BGreen}
-    ___  _   _  ____  ___  _  _    _  _  ____  _____  _  _   
-   / __)( )_( )( ___)/ __)( )/ )  ( \/ )(  _ \(  _  )( \/ )  
-  ( (__  ) _ (  )__)( (__  )  (    )  (  ) _ < )(_)(  )  (   
-   \___)(_) (_)(____)\___)(_)\_)  (_/\_)(____/(_____)(_/\_)  
-{jruks}
-
-	        __          __       __             
-	 ____  / /  __ __  / /___ __/ /__ ___   ____
-	/___/ / _ \/ // / / __/ // /  '_/(_-<  /___/
-	     /_.__/\_, /  \__/\_,_/_/\_\/___/       
-	          /___/                             
-	
-{BRed}{T}""")
-tok = input(jruks+'['+_ruks+'+'+jruks+']'+ruks__+' TOKEN BOT ! -> ; '+BGreen)
-id = input(jruks+'['+_ruks+'+'+jruks+']'+ruks__+' ID ! -> ; '+BGreen)
 try:
-	count = int(input(jruks+'['+_ruks+'+'+jruks+']'+ruks__+' Character count ! -> ; '+BRed))
-except:
-	print("="*30)
-	print("Please put numbers only")
-	exit(0)
-if count >10: print("="*30),print("Please write a number less than 10"),exit()
-
-if __name__ == '__main__':
-	print("="*60)	
-	for i in range(5):
-		H1 =threading.Thread(target=check_uesr_xbox_ruks)
-		H1.start()
-		Hlist.append(H1)
-	for H2 in Hlist:
-		H2.join								
-		
+	import requests
+	import random
+	import threading
 
 
+a = 'qwertyuiopasdfghjklzxcvbnm'
+b = '1234567890'
+id = input("EnTeR iD : ")
+token = input("EnTeR ToKeN : ")
+sessionid = input("EnTeR sEssioniD : ")
+def Lev ():
 
-				
-								
-		
+	hea = {
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'user-agent': 'user-agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html',
+        'Cookie': 'sessionid='+sessionid,
+    }
+	while True:
+	   aa = str("".join(random.choice(a)for x in range(1)))
+	   bb = str("".join(random.choice(b)for x in range(1)))
+	   dd = str("".join(random.choice(a)for x in range(1)))
+	   type1 = (aa+bb+'.'+dd)
+	   type2 = (bb+aa+dd+bb)
+	   type3 = (aa+aa+aa+bb)
+	   type4 = (aa+aa+bb+aa)
+	   type5 = (aa+bb+aa+aa)
+    type6 = (bb+aa+aa+aa)
+    type7 = ('.'+aa+bb+bb)
+    type8 = ('_'+aa+bb+bb)
+    type9 = ('.'+bb+aa+bb)
+				type10 = ('_'+bb+aa+bb)
+				type11 = ('.'+bb+aa+dd)
+				type11 = (aa+bb+dd)
+				type12 = (aa+'_'+aa+aa)
+				type13 = (aa+aa+aa+aa)
+				type14 = (bb+'.'+bb+dd)
+				type15 = (bb+'_'+bb+dd)
+				type16 = (aa+aa+bb+dd)
+				type17 = (aa+bb+aa+bb)
+				type18 = (aa+dd+dd+aa)
+				type19 = (aa+bb+bb+aa)
+				type20 = (aa+aa+bb+'_')
+				type21 = (aa+aa+aa+'_')
+				type22 = ('_'+aa+aa+'_')
+				type23 = ('_'+bb+bb+'_')
+				type24 = ('_'+aa+bb+'_')
+				type25 = ('.'+aa+aa+'_')
+				type26 = ('.'+bb+aa+'_')
+				type27 = (aa+'_'+aa+'_')
+				type28 = (aa+'.'+bb+'_')
+				type29 = (aa+'.'+'.'+aa)
+				type30 = (aa+'.'+'.'+bb)
+				type31 = (bb+'.'+'.'+aa)
+				type32 = (bb+'.'+'.'+bb)
+				type33 = (aa+'.'+bb)
+				type34 = (bb+'.'dd)
+abd = (type1,type2,type3,type4,type5,type6,type7,type8,type9,type10,type11,type12,type13,type14,type15,type16,type17,type18,type19,type20,type21,type22,type23,type24,type25,type26,type27,type28,type29,type30,type31,type32,type33,type34)
+	   user = random.choice(abd)
+	   
+	   tiko = f'https://www.tiktok.com/api/user/detail/?aid=1988&app_language=ar&app_name=tiktok_web&battery_info=0.32&browser_language=ar&browser_name=Mozilla&browser_online=true&browser_platform=MacIntel&browser_version=5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F109.0.0.0%20Safari%2F537.36&channel=tiktok_web&cookie_enabled=true&device_id=7193110014067459586&device_platform=web_pc&focus_state=true&from_page=user&history_len=10&is_fullscreen=false&is_page_visible=true&language=ar&os=mac&priority_region=&referer=&region=SA&screen_height=900&screen_width=1440tz_name=Asia%2FRiyadh&uniqueId={user}&verifyFp=verify_ldvov399_du9goymx_OHxC_4RTw_AEjU_Dth4CFGFw3lR&webcast_language=ar&msToken=f7RQRFGwBsu3WXbrhdLVX9gDRSynM_O_C7U9SX6WNqZqmb0QEsNO6H3dJ10pMAxt24bmyb2eMNPzUpr8w8-6Wx-xAawe1R6vbD6HZdDoWTPL4VOHo6ebwjHadXlUoyhG9ovbpBnhHipd_EWG&X-Bogus=DFSzswVY9D0ANeIIShUJbR/F6qHH&_signature=_02B4Z6wo00001xH2Y0gAAIDCaTiITAKYgosR9mfAAKeo28'
+	   reqsnd = requests.get(tiko, headers=hea).text
+	   if '"statusCode":10221,' in reqsnd:
+	           print(f'{user} uSeR is Available!')
+	           requests.post(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text="""cHecker v3.7 Tik 
+hunt : {user}
+Situation : Done"""")
+	   else:
+	   	print(f'{user} uSeR is NoT Available')
+Threads=[] 
+for t in range(2):
+    x = threading.Thread(target=Lev)
+    x.start()
+    Threads.append(x)
+for Th in Threads:
+    Th.join()
