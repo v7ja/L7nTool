@@ -109,9 +109,7 @@ def info(email):
 [🏴‍☠️] ʟɪɴk : https://www.instagram.com/{user}
 
 . ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ .
-♕ ᴘʏ »@mahodii
-cahnal:@vipsww
-chanal:@oppeq
+♕  » @kckkkkc
 
 '''
 	
